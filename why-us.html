@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Choose Us | NEXA BHARAT - Quality, Transparency & Timely Delivery</title>
+  <meta name="description" content="Discover why homeowners and businesses choose NEXA BHARAT. 100+ QC audits, transparent pricing with zero hidden costs, branded materials, and penalty-backed timelines.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              900: '#0f172a',
+              800: '#1e293b',
+              700: '#334155',
+              gold: '#d97706',
+              goldLight: '#f59e0b',
+              goldDark: '#b45309',
+              accent: '#fbbf24'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-500 selection:text-white flex flex-col min-h-screen">
+
+  <!-- =========================================================================
+       1. Top Information Bar
+       ========================================================================= -->
+  <div class="bg-brand-900 border-b border-slate-800 text-slate-300 text-xs py-2 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center flex-wrap gap-4 sm:gap-6">
+        <span class="flex items-center gap-1.5 hover:text-amber-400 transition-colors">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-amber-500"></i>
+          <a href="tel:+918481818152" class="font-medium">+91 84818 18152</a>
+          <span class="text-slate-600">/</span>
+          <a href="tel:+916289378847" class="font-medium">+91 62893 78847</a>
+        </span>
+        <span class="flex items-center gap-1.5 hover:text-amber-400 transition-colors">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-amber-500"></i>
+          <a href="mailto:nexabharatinterior@gmail.com">nexabharatinterior@gmail.com</a>
+        </span>
+        <span class="hidden md:flex items-center gap-1.5 text-slate-400">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-500"></i>
+          Jatragachi RR site Nandan Nagar, New Town, North 24 Parganas, Pin 700162, West Bengal
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1 text-emerald-400 font-semibold">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>...........
+        </span>
+        <span class="text-slate-600">|</span>
+        <span class="text-slate-300">Mon - Sun: 10:00 AM - 8:30 PM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. Sticky Header / Navigation
+       ========================================================================= -->
+  <header id="main-header" class="sticky top-0 z-50 bg-brand-900/95 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+            <i data-lucide="building-2" class="w-7 h-7 text-white"></i>
+          </div>
+          <div>
+            <div class="flex items-center tracking-wider font-extrabold font-heading text-xl text-white">
+              NEXA <span class="text-amber-500 ml-1.5">BHARAT</span>
+            </div>
+            <p class="text-[10px] text-slate-400 tracking-widest uppercase font-semibold">Building Dreams, Crafting Spaces</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-200">
+          <a href="index.html" class="nav-link py-1 hover:text-amber-400 transition-colors">Home</a>
+          <a href="about.html" class="nav-link py-1 hover:text-amber-400 transition-colors">About Us</a>
+          <a href="services.html" class="nav-link py-1 hover:text-amber-400 transition-colors">Services</a>
+          <a href="projects.html" class="nav-link py-1 hover:text-amber-400 transition-colors">Projects</a>
+          <a href="why-us.html" class="nav-link active py-1 hover:text-amber-400 transition-colors">Why Us</a>
+          <a href="contact.html" class="nav-link py-1 hover:text-amber-400 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Header CTA Buttons -->
+        <div class="hidden lg:flex items-center gap-4">
+          <button class="open-consult-modal inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-brand-900 font-bold px-5 py-2.5 rounded-lg shadow-lg shadow-amber-500/25 transition-all duration-300 transform hover:-translate-y-0.5">
+            <i data-lucide="calculator" class="w-4 h-4 text-brand-900"></i>
+            <span>Get Free Quote</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-lg bg-slate-800 text-slate-200 hover:text-white hover:bg-slate-700 focus:outline-none" aria-label="Open Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-brand-900/98 backdrop-blur-xl hidden flex flex-col justify-between p-6 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center">
+            <i data-lucide="building-2" class="w-6 h-6 text-brand-900"></i>
+          </div>
+          <div>
+            <span class="font-extrabold font-heading text-lg text-white">NEXA <span class="text-amber-500">BHARAT</span></span>
+            <p class="text-[9px] text-slate-400 tracking-wider">Building Dreams, Crafting Spaces</p>
+          </div>
+        </a>
+        <button id="mobile-menu-close" class="p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800" aria-label="Close Menu">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-4 py-8 text-base font-semibold text-slate-200">
+        <a href="index.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Home</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="about.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>About Us</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="services.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Services</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="projects.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Projects Showcase</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="why-us.html" class="text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Why Choose Us</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="contact.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Contact & Locations</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-800 flex flex-col gap-4">
+      <button class="open-consult-modal w-full bg-gradient-to-r from-amber-500 to-amber-600 text-brand-900 font-bold py-3.5 rounded-lg shadow-lg text-center">
+        Book Free Consultation
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       3. Page Hero Banner
+       ========================================================================= -->
+  <section class="relative bg-brand-900 text-white py-20 bg-blueprint-pattern border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+        Our Quality Commitment
+      </div>
+      <h1 class="font-heading font-extrabold text-4xl sm:text-5xl text-white tracking-tight leading-tight mb-4">
+        Why Leading Clients Choose <br class="hidden sm:inline">
+        <span class="text-gradient-gold">NEXA BHARAT</span>
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed">
+        We replace contractor unpredictability with engineering rigor, transparent billing, and penalty-backed delivery schedules.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. The 4 Core Pillars of Excellence
+       ========================================================================= -->
+  <section class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      
+      <!-- Pillar 1: Quality Workmanship -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-50 text-amber-800 text-xs font-bold uppercase tracking-wider">
+            Pillar 01
+          </div>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+            Quality Workmanship & 100+ QC Audits
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Construction is only as reliable as the quality checks behind it. At NEXA BHARAT, every stage—from soil load tests and steel rebar spacing to concrete slump testing and waterproof curing—is supervised directly by certified civil engineers, not sub-contracted third parties.
+          </p>
+          <ul class="space-y-2.5 text-xs text-slate-700 font-medium pt-2">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Concrete Cube Compressive Strength Laboratory Testing</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Laser-levelled floor alignment & plumb-line verticality checks</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> 10-Year Comprehensive Structural Warranty Certificate</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80" alt="Quality Workmanship and Civil Inspection" class="w-full h-72 sm:h-80 object-cover">
+        </div>
+      </div>
+
+      <!-- Pillar 2: Modern Designs & Durable Materials -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 lg:order-2 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-50 text-amber-800 text-xs font-bold uppercase tracking-wider">
+            Pillar 02
+          </div>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+            Modern Designs & Branded Durable Materials
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            We merge contemporary aesthetics with industrial-grade raw materials. Every sack of cement, steel rebar, sheet of plywood, and plumbing valve is sourced directly from authorized manufacturers to ensure 100% authenticity and zero counterfeit substitution.
+          </p>
+          <ul class="space-y-2.5 text-xs text-slate-700 font-medium pt-2">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Grade-A Tata Tiscon 550D TMT Steel & UltraTech OPC/PPC Cement</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> IS:710 Boiling Waterproof (BWP) Marine Plywood with 10-Yr Warranty</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Blum / Hettich soft-close hinges tested for 200,000 opening cycles</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-6 lg:order-1 rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Modern Architecture and Durable Materials" class="w-full h-72 sm:h-80 object-cover">
+        </div>
+      </div>
+
+      <!-- Pillar 3: Transparent Pricing -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-50 text-amber-800 text-xs font-bold uppercase tracking-wider">
+            Pillar 03
+          </div>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+            Transparent Pricing (Zero Hidden Costs Policy)
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            The biggest fear in construction is runaway budgets and hidden contractor surcharges. NEXA BHARAT operates on a strict itemized Bill of Quantities (BOQ) model. The price agreed upon before breaking ground is the price you pay.
+          </p>
+          <ul class="space-y-2.5 text-xs text-slate-700 font-medium pt-2">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Item-by-item BOQ with clear material brand specifications</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Milestone-linked payment stages (Pay only after inspecting completed stage)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Zero unapproved price escalations or mid-project markups</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Transparent Project Accounting and BOQ" class="w-full h-72 sm:h-80 object-cover">
+        </div>
+      </div>
+
+      <!-- Pillar 4: Timely Project Completion -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 lg:order-2 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-50 text-amber-800 text-xs font-bold uppercase tracking-wider">
+            Pillar 04
+          </div>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+            Timely Project Completion Guarantee
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            We value your time. Every NEXA BHARAT project is mapped onto a strict digital Gantt chart with dedicated site managers. We back our completion timelines with a contractual delay penalty clause, ensuring your keys are in your hand right on time.
+          </p>
+          <ul class="space-y-2.5 text-xs text-slate-700 font-medium pt-2">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Contractual penalty clause for unexcused project delays</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Daily digital photo updates & weekly engineering milestone reports</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Parallel workflow execution (Modular joinery in factory while civil finishes on site)</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-6 lg:order-1 rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="On-Time Project Management and Site Supervision" class="w-full h-72 sm:h-80 object-cover">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. Comparison Matrix: NEXA BHARAT vs Traditional Contractors
+       ========================================================================= -->
+  <section class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="scale" class="w-3.5 h-3.5"></i>
+          Side-by-Side Comparison
+        </div>
+        <h2 class="font-heading font-extrabold text-3xl text-slate-900">
+          NEXA BHARAT vs. Traditional Contractors
+        </h2>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-900 text-white font-heading uppercase text-[11px] tracking-wider">
+              <tr>
+                <th class="py-4 px-6">Feature / Benchmark</th>
+                <th class="py-4 px-6 bg-amber-600 text-white">NEXA BHARAT</th>
+                <th class="py-4 px-6 text-slate-400">Traditional Local Contractors</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50">
+                <td class="py-4 px-6 font-semibold text-slate-800">Pricing Transparency</td>
+                <td class="py-4 px-6 text-emerald-600 font-bold bg-amber-50/50">Fixed-Price Itemized BOQ (Zero Surprises)</td>
+                <td class="py-4 px-6 text-rose-500 font-medium">Vague estimates, frequent mid-work price hikes</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-4 px-6 font-semibold text-slate-800">Quality Checks</td>
+                <td class="py-4 px-6 text-emerald-600 font-bold bg-amber-50/50">450+ QC audits by IIT/NIT civil engineers</td>
+                <td class="py-4 px-6 text-rose-500 font-medium">No formal testing; dependent on daily masons</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-4 px-6 font-semibold text-slate-800">Delivery Timelines</td>
+                <td class="py-4 px-6 text-emerald-600 font-bold bg-amber-50/50">Penalty-backed contractual delivery date</td>
+                <td class="py-4 px-6 text-rose-500 font-medium">Delays ranging from 3 to 12 months are common</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-4 px-6 font-semibold text-slate-800">Material Authenticity</td>
+                <td class="py-4 px-6 text-emerald-600 font-bold bg-amber-50/50">100% Brand-certified direct manufacturer sourcing</td>
+                <td class="py-4 px-6 text-rose-500 font-medium">Frequent substitution with unbranded B-grade materials</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-4 px-6 font-semibold text-slate-800">Warranty Support</td>
+                <td class="py-4 px-6 text-emerald-600 font-bold bg-amber-50/50">10-Year Structural & 10-Year Woodwork Warranty</td>
+                <td class="py-4 px-6 text-rose-500 font-medium">Zero post-handover support once payment is collected</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. CTA Banner
+       ========================================================================= -->
+  <section class="py-16 bg-brand-900 text-white bg-blueprint-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-4">
+        Experience Stress-Free Construction & Interior Design
+      </h2>
+      <p class="text-slate-300 text-base max-w-2xl mx-auto mb-8">
+        Join hundreds of satisfied villa owners and businesses who built with NEXA BHARAT.
+      </p>
+      <button class="open-consult-modal bg-gradient-to-r from-amber-500 to-amber-600 text-brand-900 font-extrabold px-8 py-4 rounded-xl shadow-xl hover:from-amber-600 transition-all text-sm uppercase tracking-wider">
+        Book Free Consultation Now
+      </button>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. Footer
+       ========================================================================= -->
+  <footer class="bg-brand-900 text-slate-400 border-t border-slate-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center">
+              <i data-lucide="building-2" class="w-6 h-6 text-brand-900"></i>
+            </div>
+            <div>
+              <span class="font-heading font-extrabold text-lg text-white">NEXA <span class="text-amber-500">BHARAT</span></span>
+              <p class="text-[9px] text-slate-400 tracking-wider">Building Dreams, Crafting Spaces</p>
+            </div>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed pr-6">
+            From concept to final finishing, NEXA BHARAT creates spaces that are functional, stylish, comfortable, and built to last. Your trusted partner for turnkey construction, renovation, and luxury interiors.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+            <li><a href="about.html" class="hover:text-amber-400">About Us</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Services</a></li>
+            <li><a href="projects.html" class="hover:text-amber-400">Projects Showcase</a></li>
+            <li><a href="why-us.html" class="hover:text-amber-400">Why Choose Us</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Our Services</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="services.html" class="hover:text-amber-400">New Construction</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Property Renovation</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Architectural 3D Plans</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Home & Office Interiors</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Modular Kitchens</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Civil & Specialized Works</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Contact Info</h4>
+          <ul class="space-y-3 text-xs">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5"></i>
+              <span>Jatragachi RR site Nandan Nagar, New Town, North 24 Parganas, Pin 700162, West Bengal</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+              <div class="flex flex-col gap-0.5">
+                <a href="tel:+918481818152" class="hover:text-amber-400 font-medium">+91 84818 18152</a>
+                <a href="tel:+916289378847" class="hover:text-amber-400 font-medium">+91 62893 78847</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+              <a href="mailto:nexabharatinterior@gmail.com" class="hover:text-amber-400">nexabharatinterior@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+              <span>Mon - Sun: 10:00 AM - 8:30 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 NEXA BHARAT Construction & Interior Design. All rights reserved.</p>
+        <div class="flex items-center space-x-6">
+          <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-400">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Modal Dialog -->
+  <div id="consultation-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+    <div class="modal-backdrop fixed inset-0 bg-brand-900/80 backdrop-blur-sm"></div>
+    <div class="relative bg-slate-900 border border-slate-700 text-white rounded-2xl w-full max-w-lg p-6 sm:p-8 shadow-2xl z-10 animate-fade-in max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div>
+          <h3 class="font-heading font-bold text-xl text-white">Book Free Consultation</h3>
+          <p class="text-xs text-amber-400 mt-0.5">Get a customized estimate & architectural review</p>
+        </div>
+        <button class="close-modal-btn p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800" aria-label="Close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form class="nexa-lead-form space-y-4 pt-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+          <input type="text" name="name" required placeholder="e.g. Ramesh Chandra" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number *</label>
+            <input type="tel" name="phone" required placeholder="+91 98765 XXXXX" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Email</label>
+            <input type="email" name="email" placeholder="ramesh@example.com" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Project Details / Requirements</label>
+          <textarea name="message" rows="3" placeholder="Tell us about the property type, area in sq.ft, city, or service required..." class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 text-brand-900 font-extrabold py-3 rounded-lg shadow-lg text-sm transition-all uppercase tracking-wider">
+          Confirm Consultation Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-40 bg-slate-800/90 hover:bg-amber-500 hover:text-brand-900 text-slate-200 p-3 rounded-full shadow-xl transition-all opacity-0 invisible" aria-label="Back to Top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

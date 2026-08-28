@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin CRM & Inquiries | NEXA BHARAT</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              950: '#090d16',
+              900: '#0f172a',
+              800: '#1e293b',
+              700: '#334155',
+              gold: '#d97706',
+              goldLight: '#f59e0b'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased min-h-screen flex flex-col font-sans">
+
+  <!-- =========================================================================
+       1. Top Navbar
+       ========================================================================= -->
+  <header class="bg-brand-950 border-b border-slate-800 sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand & Admin Tag -->
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-black">
+            <i data-lucide="building-2" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="font-heading font-bold text-base text-white tracking-wider">NEXA <span class="text-amber-500">BHARAT</span></span>
+            <span class="ml-2 px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 text-[10px] font-bold uppercase tracking-wider border border-amber-500/30">Admin CRM</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="text-xs font-semibold text-slate-400 hover:text-white px-3 py-1.5 rounded-lg border border-slate-800 hover:border-slate-700 transition-colors">
+          View Website ↗
+        </a>
+        <button id="btn-export-csv" class="inline-flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-3.5 py-2 rounded-lg border border-slate-700 transition-colors">
+          <i data-lucide="download" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span>Export CSV</span>
+        </button>
+        <button id="btn-refresh" class="p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800 border border-slate-700 transition-colors" title="Refresh Leads">
+          <i data-lucide="rotate-cw" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Main Content
+       ========================================================================= -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full space-y-8">
+    
+    <!-- KPI Analytics Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      
+      <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700/80">
+        <div class="flex items-center justify-between text-slate-400 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider">Total Inquiries</span>
+          <i data-lucide="users" class="w-4 h-4 text-amber-400"></i>
+        </div>
+        <div id="kpi-total-leads" class="font-heading font-extrabold text-3xl text-white">--</div>
+        <p class="text-[11px] text-slate-400 mt-1">All recorded client consultations</p>
+      </div>
+
+      <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700/80">
+        <div class="flex items-center justify-between text-slate-400 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider">New Inquiries</span>
+          <i data-lucide="bell-ring" class="w-4 h-4 text-amber-400"></i>
+        </div>
+        <div id="kpi-new-leads" class="font-heading font-extrabold text-3xl text-amber-400">--</div>
+        <p class="text-[11px] text-slate-400 mt-1">Pending first engineer contact</p>
+      </div>
+
+      <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700/80">
+        <div class="flex items-center justify-between text-slate-400 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider">Site Visits Scheduled</span>
+          <i data-lucide="calendar-check" class="w-4 h-4 text-emerald-400"></i>
+        </div>
+        <div id="kpi-site-visits" class="font-heading font-extrabold text-3xl text-emerald-400">--</div>
+        <p class="text-[11px] text-slate-400 mt-1">Active site inspection pipeline</p>
+      </div>
+
+      <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700/80">
+        <div class="flex items-center justify-between text-slate-400 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider">Estimated Pipeline</span>
+          <i data-lucide="trending-up" class="w-4 h-4 text-amber-400"></i>
+        </div>
+        <div id="kpi-pipeline" class="font-heading font-extrabold text-3xl text-gradient-gold">₹14.85 Cr</div>
+        <p class="text-[11px] text-slate-400 mt-1">Active project estimate value</p>
+      </div>
+
+    </div>
+
+    <!-- Leads Table & Search Section -->
+    <div class="bg-slate-800/90 rounded-2xl border border-slate-700 shadow-xl overflow-hidden">
+      
+      <!-- Table Filter & Search Controls -->
+      <div class="p-5 border-b border-slate-700 flex flex-col md:flex-row items-center justify-between gap-4">
+        
+        <!-- Search Box -->
+        <div class="relative w-full md:w-80">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input 
+            type="text" 
+            id="lead-search" 
+            placeholder="Search by name, phone, city..." 
+            class="w-full bg-slate-900 border border-slate-700 rounded-xl pl-10 pr-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500"
+          >
+        </div>
+
+        <!-- Status Filter Pills -->
+        <div class="flex flex-wrap items-center gap-1.5 text-xs w-full md:w-auto">
+          <button data-status="ALL" class="status-filter-btn active px-3 py-1.5 rounded-lg font-bold bg-amber-600 text-white">All</button>
+          <button data-status="NEW" class="status-filter-btn px-3 py-1.5 rounded-lg font-medium text-slate-300 hover:bg-slate-700">New</button>
+          <button data-status="SITE_VISIT_SCHEDULED" class="status-filter-btn px-3 py-1.5 rounded-lg font-medium text-slate-300 hover:bg-slate-700">Site Visit</button>
+          <button data-status="PROPOSAL_SENT" class="status-filter-btn px-3 py-1.5 rounded-lg font-medium text-slate-300 hover:bg-slate-700">Proposal Sent</button>
+          <button data-status="WON" class="status-filter-btn px-3 py-1.5 rounded-lg font-medium text-slate-300 hover:bg-slate-700">Won</button>
+        </div>
+
+      </div>
+
+      <!-- Leads Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-900/80 text-[11px] font-heading uppercase text-slate-400 border-b border-slate-700">
+            <tr>
+              <th class="py-3.5 px-5">Lead ID / Date</th>
+              <th class="py-3.5 px-5">Client Info</th>
+              <th class="py-3.5 px-5">Service & Scope</th>
+              <th class="py-3.5 px-5">Budget & Timeline</th>
+              <th class="py-3.5 px-5">Status</th>
+              <th class="py-3.5 px-5 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="leads-table-body" class="divide-y divide-slate-700/60">
+            <tr>
+              <td colspan="6" class="text-center py-10 text-slate-500">Loading inquiries from backend...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- =========================================================================
+       3. Lead Detail & Notes Modal
+       ========================================================================= -->
+  <div id="lead-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+    <div class="modal-backdrop fixed inset-0 bg-slate-950/80 backdrop-blur-sm"></div>
+    <div class="relative bg-slate-900 border border-slate-700 rounded-2xl w-full max-w-lg p-6 text-white shadow-2xl z-10 animate-fade-in max-h-[90vh] overflow-y-auto space-y-5">
+      
+      <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+        <div>
+          <span id="modal-lead-id" class="text-xs font-mono text-amber-400 font-bold block">--</span>
+          <h3 id="modal-lead-name" class="font-heading font-bold text-lg text-white">Client Details</h3>
+        </div>
+        <button id="modal-close-btn" class="p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <div class="grid grid-cols-2 gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700">
+          <div><strong class="text-slate-400">Phone:</strong> <span id="modal-lead-phone" class="text-white block font-medium"></span></div>
+          <div><strong class="text-slate-400">Email:</strong> <span id="modal-lead-email" class="text-white block font-medium"></span></div>
+          <div><strong class="text-slate-400">Location:</strong> <span id="modal-lead-location" class="text-white block font-medium"></span></div>
+          <div><strong class="text-slate-400">Area:</strong> <span id="modal-lead-area" class="text-white block font-medium"></span></div>
+          <div><strong class="text-slate-400">Service:</strong> <span id="modal-lead-service" class="text-amber-400 block font-bold"></span></div>
+          <div><strong class="text-slate-400">Budget:</strong> <span id="modal-lead-budget" class="text-white block font-medium"></span></div>
+        </div>
+
+        <div>
+          <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Client's Message</label>
+          <div id="modal-lead-message" class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-slate-300 leading-relaxed italic"></div>
+        </div>
+
+        <div>
+          <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Status Workflow</label>
+          <select id="modal-status-select" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white font-medium focus:outline-none focus:border-amber-500">
+            <option value="NEW">NEW (Uncontacted)</option>
+            <option value="CONTACTED">CONTACTED</option>
+            <option value="SITE_VISIT_SCHEDULED">SITE_VISIT_SCHEDULED</option>
+            <option value="PROPOSAL_SENT">PROPOSAL_SENT</option>
+            <option value="WON">WON (Contract Signed)</option>
+            <option value="CLOSED">CLOSED (Lost/Archived)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Engineering & Site Notes</label>
+          <textarea id="modal-lead-notes" rows="3" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-amber-500" placeholder="Add site visit date, architectural feedback, or BOQ discussion points..."></textarea>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-3 border-t border-slate-800">
+        <button id="modal-save-btn" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 text-brand-950 font-bold px-5 py-2.5 rounded-lg text-xs transition-all uppercase tracking-wider">
+          Save Changes
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Admin JavaScript Engine -->
+  <script>
+    let allLeads = [];
+    let currentFilter = 'ALL';
+    let currentSearch = '';
+    let activeLeadId = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      fetchStats();
+      fetchLeads();
+      initEventListeners();
+      if (window.lucide) window.lucide.createIcons();
+    });
+
+    function initEventListeners() {
+      // Refresh Button
+      document.getElementById('btn-refresh')?.addEventListener('click', () => {
+        fetchStats();
+        fetchLeads();
+      });
+
+      // Export CSV Button
+      document.getElementById('btn-export-csv')?.addEventListener('click', () => {
+        window.location.href = '/api/consultations/export';
+      });
+
+      // Search input
+      const searchInput = document.getElementById('lead-search');
+      searchInput?.addEventListener('input', (e) => {
+        currentSearch = e.target.value.trim().toLowerCase();
+        renderTable();
+      });
+
+      // Filter buttons
+      document.querySelectorAll('.status-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.status-filter-btn').forEach(b => b.classList.remove('active', 'bg-amber-600', 'text-white'));
+          btn.classList.add('active', 'bg-amber-600', 'text-white');
+          currentFilter = btn.getAttribute('data-status');
+          renderTable();
+        });
+      });
+
+      // Modal close
+      document.getElementById('modal-close-btn')?.addEventListener('click', closeModal);
+      document.querySelector('#lead-modal .modal-backdrop')?.addEventListener('click', closeModal);
+
+      // Modal save
+      document.getElementById('modal-save-btn')?.addEventListener('click', saveLeadChanges);
+    }
+
+    async function fetchStats() {
+      try {
+        const res = await fetch('/api/stats');
+        const json = await res.json();
+        if (json.success && json.data) {
+          document.getElementById('kpi-total-leads').textContent = json.data.totalLeads;
+          document.getElementById('kpi-new-leads').textContent = json.data.newLeads;
+          document.getElementById('kpi-site-visits').textContent = json.data.siteVisitsScheduled;
+          document.getElementById('kpi-pipeline').textContent = json.data.estimatedPipeline || '₹14.85 Cr';
+        }
+      } catch (err) {
+        console.warn('API Stats fetch fallback:', err);
+      }
+    }
+
+    async function fetchLeads() {
+      try {
+        const res = await fetch('/api/consultations');
+        const json = await res.json();
+        if (json.success && Array.isArray(json.data)) {
+          allLeads = json.data;
+          renderTable();
+        }
+      } catch (err) {
+        console.warn('API Leads fetch error:', err);
+      }
+    }
+
+    function renderTable() {
+      const tbody = document.getElementById('leads-table-body');
+      if (!tbody) return;
+
+      let filtered = allLeads.filter(lead => {
+        const matchesStatus = currentFilter === 'ALL' || lead.status === currentFilter;
+        const matchesSearch = !currentSearch || 
+          (lead.name && lead.name.toLowerCase().includes(currentSearch)) ||
+          (lead.phone && lead.phone.toLowerCase().includes(currentSearch)) ||
+          (lead.email && lead.email.toLowerCase().includes(currentSearch)) ||
+          (lead.location && lead.location.toLowerCase().includes(currentSearch));
+        return matchesStatus && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" class="text-center py-8 text-slate-500 text-xs">No inquiries matching filter.</td></tr>`;
+        return;
+      }
+
+      const statusBadges = {
+        'NEW': 'bg-amber-500/20 text-amber-400 border border-amber-500/40',
+        'CONTACTED': 'bg-blue-500/20 text-blue-400 border border-blue-500/40',
+        'SITE_VISIT_SCHEDULED': 'bg-purple-500/20 text-purple-400 border border-purple-500/40',
+        'PROPOSAL_SENT': 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/40',
+        'WON': 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40',
+        'CLOSED': 'bg-slate-700/50 text-slate-400 border border-slate-700'
+      };
+
+      tbody.innerHTML = filtered.map(lead => {
+        const formattedDate = lead.createdAt ? new Date(lead.createdAt).toLocaleDateString('en-IN', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '--';
+        const badgeClass = statusBadges[lead.status] || statusBadges['NEW'];
+        const cleanPhone = (lead.phone || '').replace(/\s+/g, '');
+
+        return `
+          <tr class="hover:bg-slate-800/50 transition-colors">
+            <td class="py-4 px-5">
+              <span class="font-mono text-amber-400 font-bold block">${lead.id}</span>
+              <span class="text-[11px] text-slate-500">${formattedDate}</span>
+            </td>
+            <td class="py-4 px-5">
+              <span class="font-bold text-white block text-sm">${lead.name}</span>
+              <span class="text-[11px] text-slate-400">${lead.phone}</span>
+              ${lead.location ? `<span class="text-[10px] text-slate-500 block">📍 ${lead.location}</span>` : ''}
+            </td>
+            <td class="py-4 px-5">
+              <span class="font-semibold text-slate-200 block">${lead.service}</span>
+              <span class="text-[11px] text-slate-400">${lead.area || 'N/A'}</span>
+            </td>
+            <td class="py-4 px-5">
+              <span class="font-medium text-slate-300 block">${lead.budget || 'Standard'}</span>
+              <span class="text-[11px] text-slate-500">Timeline: ${lead.timeline || 'Flexible'}</span>
+            </td>
+            <td class="py-4 px-5">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${badgeClass}">
+                ${lead.status.replace(/_/g, ' ')}
+              </span>
+            </td>
+            <td class="py-4 px-5 text-right space-x-2">
+              <a href="https://wa.me/${cleanPhone.replace('+', '')}?text=Hello%20${encodeURIComponent(lead.name)},%20this%20is%20NEXA%20BHARAT%20Engineering%20team%20regarding%20your%20consultation." target="_blank" class="p-1.5 text-emerald-400 hover:text-emerald-300 rounded bg-slate-800 hover:bg-slate-700 inline-block" title="WhatsApp Client">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              </a>
+              <button onclick="openLeadModal('${lead.id}')" class="px-2.5 py-1.5 text-xs font-bold rounded bg-amber-500/20 text-amber-400 hover:bg-amber-500 hover:text-brand-950 transition-all">
+                Manage
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function openLeadModal(leadId) {
+      const lead = allLeads.find(l => l.id === leadId);
+      if (!lead) return;
+
+      activeLeadId = leadId;
+      document.getElementById('modal-lead-id').textContent = lead.id;
+      document.getElementById('modal-lead-name').textContent = lead.name;
+      document.getElementById('modal-lead-phone').textContent = lead.phone || '--';
+      document.getElementById('modal-lead-email').textContent = lead.email || '--';
+      document.getElementById('modal-lead-location').textContent = lead.location || '--';
+      document.getElementById('modal-lead-area').textContent = lead.area || '--';
+      document.getElementById('modal-lead-service').textContent = lead.service || '--';
+      document.getElementById('modal-lead-budget').textContent = lead.budget || '--';
+      document.getElementById('modal-lead-message').textContent = lead.message || 'No additional message provided.';
+      document.getElementById('modal-status-select').value = lead.status || 'NEW';
+      document.getElementById('modal-lead-notes').value = lead.notes || '';
+
+      document.getElementById('lead-modal').classList.remove('hidden');
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('lead-modal').classList.add('hidden');
+      activeLeadId = null;
+    }
+
+    async function saveLeadChanges() {
+      if (!activeLeadId) return;
+
+      const newStatus = document.getElementById('modal-status-select').value;
+      const newNotes = document.getElementById('modal-lead-notes').value;
+
+      try {
+        const res = await fetch('/api/consultations', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: activeLeadId, status: newStatus, notes: newNotes })
+        });
+        const json = await res.json();
+        if (json.success) {
+          const idx = allLeads.findIndex(l => l.id === activeLeadId);
+          if (idx !== -1) {
+            allLeads[idx].status = newStatus;
+            allLeads[idx].notes = newNotes;
+          }
+          closeModal();
+          renderTable();
+          fetchStats();
+        }
+      } catch (err) {
+        console.error('Update lead error:', err);
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Showcase | NEXA BHARAT - Turnkey Portfolio</title>
+  <meta name="description" content="Browse completed turnkey residential construction, luxury apartments, corporate offices, and modular kitchens delivered by NEXA BHARAT.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              900: '#0f172a',
+              800: '#1e293b',
+              700: '#334155',
+              gold: '#d97706',
+              goldLight: '#f59e0b',
+              goldDark: '#b45309',
+              accent: '#fbbf24'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-500 selection:text-white flex flex-col min-h-screen">
+
+  <!-- =========================================================================
+       1. Top Information Bar
+       ========================================================================= -->
+  <div class="bg-brand-900 border-b border-slate-800 text-slate-300 text-xs py-2 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center flex-wrap gap-4 sm:gap-6">
+        <span class="flex items-center gap-1.5 hover:text-amber-400 transition-colors">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-amber-500"></i>
+          <a href="tel:+918481818152" class="font-medium">+91 84818 18152</a>
+          <span class="text-slate-600">/</span>
+          <a href="tel:+916289378847" class="font-medium">+91 62893 78847</a>
+        </span>
+        <span class="flex items-center gap-1.5 hover:text-amber-400 transition-colors">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-amber-500"></i>
+          <a href="mailto:nexabharatinterior@gmail.com">nexabharatinterior@gmail.com</a>
+        </span>
+        <span class="hidden md:flex items-center gap-1.5 text-slate-400">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-500"></i>
+          Jatragachi RR site Nandan Nagar, New Town, North 24 Parganas, Pin 700162, West Bengal
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1 text-emerald-400 font-semibold">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>............
+        </span>
+        <span class="text-slate-600">|</span>
+        <span class="text-slate-300">Mon - Sun: 10:00 AM - 8:30 PM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. Sticky Header / Navigation
+       ========================================================================= -->
+  <header id="main-header" class="sticky top-0 z-50 bg-brand-900/95 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+            <i data-lucide="building-2" class="w-7 h-7 text-white"></i>
+          </div>
+          <div>
+            <div class="flex items-center tracking-wider font-extrabold font-heading text-xl text-white">
+              NEXA <span class="text-amber-500 ml-1.5">BHARAT</span>
+            </div>
+            <p class="text-[10px] text-slate-400 tracking-widest uppercase font-semibold">Building Dreams, Crafting Spaces</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-200">
+          <a href="index.html" class="nav-link py-1 hover:text-amber-400 transition-colors">Home</a>
+          <a href="about.html" class="nav-link py-1 hover:text-amber-400 transition-colors">About Us</a>
+          <a href="services.html" class="nav-link py-1 hover:text-amber-400 transition-colors">Services</a>
+          <a href="projects.html" class="nav-link active py-1 hover:text-amber-400 transition-colors">Projects</a>
+          <a href="why-us.html" class="nav-link py-1 hover:text-amber-400 transition-colors">Why Us</a>
+          <a href="contact.html" class="nav-link py-1 hover:text-amber-400 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Header CTA Buttons -->
+        <div class="hidden lg:flex items-center gap-4">
+          <button class="open-consult-modal inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-brand-900 font-bold px-5 py-2.5 rounded-lg shadow-lg shadow-amber-500/25 transition-all duration-300 transform hover:-translate-y-0.5">
+            <i data-lucide="calculator" class="w-4 h-4 text-brand-900"></i>
+            <span>Get Free Quote</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-lg bg-slate-800 text-slate-200 hover:text-white hover:bg-slate-700 focus:outline-none" aria-label="Open Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-brand-900/98 backdrop-blur-xl hidden flex flex-col justify-between p-6 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center">
+            <i data-lucide="building-2" class="w-6 h-6 text-brand-900"></i>
+          </div>
+          <div>
+            <span class="font-extrabold font-heading text-lg text-white">NEXA <span class="text-amber-500">BHARAT</span></span>
+            <p class="text-[9px] text-slate-400 tracking-wider">Building Dreams, Crafting Spaces</p>
+          </div>
+        </a>
+        <button id="mobile-menu-close" class="p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800" aria-label="Close Menu">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-4 py-8 text-base font-semibold text-slate-200">
+        <a href="index.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Home</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="about.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>About Us</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="services.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Services</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="projects.html" class="text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Projects Showcase</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="why-us.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Why Choose Us</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="contact.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Contact & Locations</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-800 flex flex-col gap-4">
+      <button class="open-consult-modal w-full bg-gradient-to-r from-amber-500 to-amber-600 text-brand-900 font-bold py-3.5 rounded-lg shadow-lg text-center">
+        Book Free Consultation
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       3. Page Hero Banner
+       ========================================================================= -->
+  <section class="relative bg-brand-900 text-white py-20 bg-blueprint-pattern border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+        <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
+        50+ Turnkey Landmarks Delivered
+      </div>
+      <h1 class="font-heading font-extrabold text-4xl sm:text-5xl text-white tracking-tight leading-tight mb-4">
+        Our Completed <br class="hidden sm:inline">
+        <span class="text-gradient-gold">Projects & Case Studies</span>
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed">
+        Explore our diverse portfolio spanning turnkey luxury villas, contemporary builder floors, high-end apartment interiors, corporate workplaces, and modular kitchens.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. Filterable Portfolio Grid
+       ========================================================================= -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Filter Bar -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-16">
+        <button data-filter="all" class="filter-btn active px-5 py-2.5 rounded-xl text-xs font-bold border border-slate-300 bg-amber-600 text-white shadow-sm transition-all">
+          All Projects (9)
+        </button>
+        <button data-filter="residential" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 shadow-sm transition-all">
+          Residential Construction
+        </button>
+        <button data-filter="commercial" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 shadow-sm transition-all">
+          Commercial & Corporate
+        </button>
+        <button data-filter="interiors" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 shadow-sm transition-all">
+          Luxury Interiors
+        </button>
+        <button data-filter="renovation" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 shadow-sm transition-all">
+          Modular Kitchen & Renovation
+        </button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- 1. Residential Villa Gurugram -->
+        <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift" data-category="residential">
+          <div class="image-zoom-container relative h-64">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="The Imperial Heights Villa Construction" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-brand-900/90 text-amber-400 font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">Residential</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-lg text-slate-900 mb-1.5">The Imperial Heights Villa</h3>
+            <p class="text-slate-500 text-xs mb-4">Complete turnkey RCC construction, 3-storey elevation, and swimming pool landscaping.</p>
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-slate-50 p-3 rounded-lg mb-4">
+              <div><strong class="text-slate-900">Area:</strong> 2,300 sq.ft.</div>
+              <div><strong class="text-slate-900">Time:</strong> 8 Months</div>
+              <div><strong class="text-slate-900">Location:</strong> Rajarhat</div>
+              <div><strong class="text-slate-900">Scope:</strong> Full Turnkey</div>
+            </div>
+            <button data-service="The Imperial Heights Villa" class="open-consult-modal w-full py-2.5 text-center text-xs font-bold text-amber-600 hover:text-amber-700 border border-amber-200 rounded-lg hover:bg-amber-50 transition-colors">
+              Inquire About Similar Build
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Luxury Interior South Delhi -->
+        <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift" data-category="interiors">
+          <div class="image-zoom-container relative h-64">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Aura Penthouse Luxury Interior" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-brand-900/90 text-amber-400 font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">Interiors</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-lg text-slate-900 mb-1.5">Aura Penthouse Interiors</h3>
+            <p class="text-slate-500 text-xs mb-4">Italian Statuario marble flooring, designer false ceiling, magnetic profile lights & veneer panelling.</p>
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-slate-50 p-3 rounded-lg mb-4">
+              <div><strong class="text-slate-900">Area:</strong> 1,800 sq.ft.</div>
+              <div><strong class="text-slate-900">Time:</strong> 60 Days</div>
+              <div><strong class="text-slate-900">Location:</strong> Garia Kolkata</div>
+              <div><strong class="text-slate-900">Scope:</strong> Luxury Interior</div>
+            </div>
+            <button data-service="Aura Penthouse Interiors" class="open-consult-modal w-full py-2.5 text-center text-xs font-bold text-amber-600 hover:text-amber-700 border border-amber-200 rounded-lg hover:bg-amber-50 transition-colors">
+              Inquire About Similar Interior
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Commercial Office Noida -->
+        <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift" data-category="commercial">
+          <div class="image-zoom-container relative h-64">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Nexus Fintech Corporate Office" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-brand-900/90 text-amber-400 font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">Commercial</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-lg text-slate-900 mb-1.5">Nexus Fintech Tech Park</h3>
+            <p class="text-slate-500 text-xs mb-4">Turnkey corporate workplace with 85 workstations, executive cabins, acoustic meeting rooms & cafeteria.</p>
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-slate-50 p-3 rounded-lg mb-4">
+              <div><strong class="text-slate-900">Area:</strong> 1,700 sq.ft.</div>
+              <div><strong class="text-slate-900">Time:</strong> 90 Days</div>
+              <div><strong class="text-slate-900">Location:</strong> Ranchi Jharkhand</div>
+              <div><strong class="text-slate-900">Scope:</strong> Commercial MEP</div>
+            </div>
+            <button data-service="Nexus Fintech Tech Park" class="open-consult-modal w-full py-2.5 text-center text-xs font-bold text-amber-600 hover:text-amber-700 border border-amber-200 rounded-lg hover:bg-amber-50 transition-colors">
+              Inquire About Commercial Fitout
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Modular Kitchen & Dining -->
+        <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift" data-category="renovation">
+          <div class="image-zoom-container relative h-64">
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="German Acrylic Island Modular Kitchen" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-brand-900/90 text-amber-400 font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">Kitchen & Renovation</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-lg text-slate-900 mb-1.5">Grandeur Island Modular Kitchen</h3>
+            <p class="text-slate-500 text-xs mb-4">High-gloss acrylic shutters, Blum Servo-Drive motorized liftups, KalingaStone quartz counter.</p>
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-slate-50 p-3 rounded-lg mb-4">
+              <div><strong class="text-slate-900">Area:</strong> 300 sq.ft.</div>
+              <div><strong class="text-slate-900">Time:</strong> 21 Days</div>
+              <div><strong class="text-slate-900">Location:</strong> Patharghata Sapurji</div>
+              <div><strong class="text-slate-900">Scope:</strong> German Kitchen</div>
+            </div>
+            <button data-service="Grandeur Island Modular Kitchen" class="open-consult-modal w-full py-2.5 text-center text-xs font-bold text-amber-600 hover:text-amber-700 border border-amber-200 rounded-lg hover:bg-amber-50 transition-colors">
+              Inquire About Kitchen Design
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Builder Floor Construction -->
+        <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift" data-category="residential">
+          <div class="image-zoom-container relative h-64">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Luxury 4-Storey Builder Floor" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-brand-900/90 text-amber-400 font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">Residential</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-lg text-slate-900 mb-1.5">Sovereign 4-Storey Builder Floors</h3>
+            <p class="text-slate-500 text-xs mb-4">Stilt parking + 4 floors residential construction with Otis elevator & Vastu compliant layout.</p>
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-slate-50 p-3 rounded-lg mb-4">
+              <div><strong class="text-slate-900">Area:</strong> 2,200 sq.ft.</div>
+              <div><strong class="text-slate-900">Time:</strong> 11 Months</div>
+              <div><strong class="text-slate-900">Location:</strong> New Town </div>
+              <div><strong class="text-slate-900">Scope:</strong> Full Civil + MEP</div>
+            </div>
+            <button data-service="Sovereign 4-Storey Builder Floors" class="open-consult-modal w-full py-2.5 text-center text-xs font-bold text-amber-600 hover:text-amber-700 border border-amber-200 rounded-lg hover:bg-amber-50 transition-colors">
+              Inquire About Builder Floors
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. Master Bedroom & Wardrobe Interior -->
+        <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift" data-category="interiors">
+          <div class="image-zoom-container relative h-64">
+            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80" alt="Master Suite Bedroom Interior" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-brand-900/90 text-amber-400 font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">Interiors</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-lg text-slate-900 mb-1.5">Elysium Master Suite & Walk-in Closet</h3>
+            <p class="text-slate-500 text-xs mb-4">Tinted glass sensor wardrobes, fluted charcoal headboard wall, and integrated ambient cove lighting.</p>
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-slate-50 p-3 rounded-lg mb-4">
+              <div><strong class="text-slate-900">Area:</strong> 350 sq.ft.</div>
+              <div><strong class="text-slate-900">Time:</strong> 15 Days</div>
+              <div><strong class="text-slate-900">Location:</strong> Rajarhat New Town</div>
+              <div><strong class="text-slate-900">Scope:</strong> Master Bedroom</div>
+            </div>
+            <button data-service="Elysium Master Suite" class="open-consult-modal w-full py-2.5 text-center text-xs font-bold text-amber-600 hover:text-amber-700 border border-amber-200 rounded-lg hover:bg-amber-50 transition-colors">
+              Inquire About Master Suite
+            </button>
+          </div>
+        </div>
+
+        <!-- 7. Commercial Retail Showroom -->
+        <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift" data-category="commercial">
+          <div class="image-zoom-container relative h-64">
+            <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80" alt="Luxury Retail Boutique Showroom" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-brand-900/90 text-amber-400 font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">Commercial</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-lg text-slate-900 mb-1.5">Vogue Designer Fashion Flagship</h3>
+            <p class="text-slate-500 text-xs mb-4">High-end retail interior featuring brushed brass display racks, micro-concrete flooring, and track spotlights.</p>
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-slate-50 p-3 rounded-lg mb-4">
+              <div><strong class="text-slate-900">Area:</strong> 2,500 sq.ft.</div>
+              <div><strong class="text-slate-900">Time:</strong> 60 Days</div>
+              <div><strong class="text-slate-900">Location:</strong> Dum Dum, Laketown</div>
+              <div><strong class="text-slate-900">Scope:</strong> Retail Architecture</div>
+            </div>
+            <button data-service="Vogue Fashion Flagship" class="open-consult-modal w-full py-2.5 text-center text-xs font-bold text-amber-600 hover:text-amber-700 border border-amber-200 rounded-lg hover:bg-amber-50 transition-colors">
+              Inquire About Retail Design
+            </button>
+          </div>
+        </div>
+
+        <!-- 8. Complete Heritage Renovation -->
+        <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift" data-category="renovation">
+          <div class="image-zoom-container relative h-64">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Heritage Bungalow Renovation" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-brand-900/90 text-amber-400 font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">Kitchen & Renovation</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-lg text-slate-900 mb-1.5">Heritage Bungalow Structural Makeover</h3>
+            <p class="text-slate-500 text-xs mb-4">30-year-old bungalow structural strengthening, epoxy beam retrofitting, and modern exterior facelift.</p>
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-slate-50 p-3 rounded-lg mb-4">
+              <div><strong class="text-slate-900">Area:</strong> 1,200 sq.ft.</div>
+              <div><strong class="text-slate-900">Time:</strong> 14+ Months</div>
+              <div><strong class="text-slate-900">Location:</strong> Behala</div>
+              <div><strong class="text-slate-900">Scope:</strong> Full Renovation</div>
+            </div>
+            <button data-service="Heritage Bungalow Renovation" class="open-consult-modal w-full py-2.5 text-center text-xs font-bold text-amber-600 hover:text-amber-700 border border-amber-200 rounded-lg hover:bg-amber-50 transition-colors">
+              Inquire About Renovation
+            </button>
+          </div>
+        </div>
+
+        <!-- 9. Modern Duplex Apartment Interior -->
+        <div class="project-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift" data-category="interiors">
+          <div class="image-zoom-container relative h-64">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Duplex Penthouse Living Room" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-brand-900/90 text-amber-400 font-bold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider">Interiors</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-lg text-slate-900 mb-1.5">Skyline Duplex Lounge & Bar</h3>
+            <p class="text-slate-500 text-xs mb-4">Double-height living room acoustic wood slats, onyx backlit bar counter, and floating staircase.</p>
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-slate-50 p-3 rounded-lg mb-4">
+              <div><strong class="text-slate-900">Area:</strong> 2,200 sq.ft.</div>
+              <div><strong class="text-slate-900">Time:</strong> 8+ Months</div>
+              <div><strong class="text-slate-900">Location:</strong> Ahmedabad</div>
+              <div><strong class="text-slate-900">Scope:</strong> Luxury Duplex</div>
+            </div>
+            <button data-service="Skyline Duplex Lounge" class="open-consult-modal w-full py-2.5 text-center text-xs font-bold text-amber-600 hover:text-amber-700 border border-amber-200 rounded-lg hover:bg-amber-50 transition-colors">
+              Inquire About Duplex Design
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. CTA Banner
+       ========================================================================= -->
+  <section class="py-16 bg-brand-900 text-white bg-blueprint-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-4">
+        Love What You See? Let's Design Your Space.
+      </h2>
+      <p class="text-slate-300 text-base max-w-2xl mx-auto mb-8">
+        Get in touch with our design directors to turn your concept into an engineering masterpiece.
+      </p>
+      <button class="open-consult-modal bg-gradient-to-r from-amber-500 to-amber-600 text-brand-900 font-extrabold px-8 py-4 rounded-xl shadow-xl hover:from-amber-600 transition-all text-sm uppercase tracking-wider">
+        Book Free Project Consultation
+      </button>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. Footer
+       ========================================================================= -->
+  <footer class="bg-brand-900 text-slate-400 border-t border-slate-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center">
+              <i data-lucide="building-2" class="w-6 h-6 text-brand-900"></i>
+            </div>
+            <div>
+              <span class="font-heading font-extrabold text-lg text-white">NEXA <span class="text-amber-500">BHARAT</span></span>
+              <p class="text-[9px] text-slate-400 tracking-wider">Building Dreams, Crafting Spaces</p>
+            </div>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed pr-6">
+            From concept to final finishing, NEXA BHARAT creates spaces that are functional, stylish, comfortable, and built to last. Your trusted partner for turnkey construction, renovation, and luxury interiors.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+            <li><a href="about.html" class="hover:text-amber-400">About Us</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Services</a></li>
+            <li><a href="projects.html" class="hover:text-amber-400">Projects Showcase</a></li>
+            <li><a href="why-us.html" class="hover:text-amber-400">Why Choose Us</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Our Services</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="services.html" class="hover:text-amber-400">New Construction</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Property Renovation</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Architectural 3D Plans</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Home & Office Interiors</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Modular Kitchens</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Civil & Specialized Works</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Contact Info</h4>
+          <ul class="space-y-3 text-xs">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5"></i>
+              <span>Jatragachi RR site Nandan Nagar, New Town, North 24 Parganas, Pin 700162, West Bengal</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+              <div class="flex flex-col gap-0.5">
+                <a href="tel:+918481818152" class="hover:text-amber-400 font-medium">+91 84818 18152</a>
+                <a href="tel:+916289378847" class="hover:text-amber-400 font-medium">+91 62893 78847</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+              <a href="mailto:nexabharatinterior@gmail.com" class="hover:text-amber-400">nexabharatinterior@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+              <span>Mon - Sun: 10:00 AM - 8:30 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 NEXA BHARAT Construction & Interior Design. All rights reserved.</p>
+        <div class="flex items-center space-x-6">
+          <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-400">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Modal Dialog -->
+  <div id="consultation-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+    <div class="modal-backdrop fixed inset-0 bg-brand-900/80 backdrop-blur-sm"></div>
+    <div class="relative bg-slate-900 border border-slate-700 text-white rounded-2xl w-full max-w-lg p-6 sm:p-8 shadow-2xl z-10 animate-fade-in max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div>
+          <h3 class="font-heading font-bold text-xl text-white">Book Free Consultation</h3>
+          <p class="text-xs text-amber-400 mt-0.5">Get a customized estimate & architectural review</p>
+        </div>
+        <button class="close-modal-btn p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800" aria-label="Close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form class="nexa-lead-form space-y-4 pt-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+          <input type="text" name="name" required placeholder="e.g. Ramesh Chandra" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number *</label>
+            <input type="tel" name="phone" required placeholder="+91 98765 XXXXX" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Email</label>
+            <input type="email" name="email" placeholder="ramesh@example.com" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Project Details / Requirements</label>
+          <textarea name="message" rows="3" placeholder="Tell us about the property type, area in sq.ft, city, or service required..." class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 text-brand-900 font-extrabold py-3 rounded-lg shadow-lg text-sm transition-all uppercase tracking-wider">
+          Confirm Consultation Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-40 bg-slate-800/90 hover:bg-amber-500 hover:text-brand-900 text-slate-200 p-3 rounded-full shadow-xl transition-all opacity-0 invisible" aria-label="Back to Top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

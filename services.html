@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | NEXA BHARAT - Turnkey Construction & Interior Solutions</title>
+  <meta name="description" content="Explore NEXA BHARAT's complete services: new construction, civil work, property renovation, architectural planning, interior design, modular kitchens, and specialized finishing.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              900: '#0f172a',
+              800: '#1e293b',
+              700: '#334155',
+              gold: '#d97706',
+              goldLight: '#f59e0b',
+              goldDark: '#b45309',
+              accent: '#fbbf24'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-500 selection:text-white flex flex-col min-h-screen">
+
+  <!-- =========================================================================
+       1. Top Information Bar
+       ========================================================================= -->
+  <div class="bg-brand-900 border-b border-slate-800 text-slate-300 text-xs py-2 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center flex-wrap gap-4 sm:gap-6">
+        <span class="flex items-center gap-1.5 hover:text-amber-400 transition-colors">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-amber-500"></i>
+          <a href="tel:+918481818152" class="font-medium">+91 84818 18152</a>
+          <span class="text-slate-600">/</span>
+          <a href="tel:+916289378847" class="font-medium">+91 62893 78847</a>
+        </span>
+        <span class="flex items-center gap-1.5 hover:text-amber-400 transition-colors">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-amber-500"></i>
+          <a href="mailto:nexabharatinterior@gmail.com">nexabharatinterior@gmail.com</a>
+        </span>
+        <span class="hidden md:flex items-center gap-1.5 text-slate-400">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-500"></i>
+          Jatragachi RR site Nandan Nagar, New Town, North 24 Parganas, Pin 700162, West Bengal
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1 text-emerald-400 font-semibold">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>..........
+        </span>
+        <span class="text-slate-600">|</span>
+        <span class="text-slate-300">Mon - Sat: 9:00 AM - 7:30 PM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. Sticky Header / Navigation
+       ========================================================================= -->
+  <header id="main-header" class="sticky top-0 z-50 bg-brand-900/95 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+            <i data-lucide="building-2" class="w-7 h-7 text-white"></i>
+          </div>
+          <div>
+            <div class="flex items-center tracking-wider font-extrabold font-heading text-xl text-white">
+              NEXA <span class="text-amber-500 ml-1.5">BHARAT</span>
+            </div>
+            <p class="text-[10px] text-slate-400 tracking-widest uppercase font-semibold">Building Dreams, Crafting Spaces</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-200">
+          <a href="index.html" class="nav-link py-1 hover:text-amber-400 transition-colors">Home</a>
+          <a href="about.html" class="nav-link py-1 hover:text-amber-400 transition-colors">About Us</a>
+          <a href="services.html" class="nav-link active py-1 hover:text-amber-400 transition-colors">Services</a>
+          <a href="projects.html" class="nav-link py-1 hover:text-amber-400 transition-colors">Projects</a>
+          <a href="why-us.html" class="nav-link py-1 hover:text-amber-400 transition-colors">Why Us</a>
+          <a href="contact.html" class="nav-link py-1 hover:text-amber-400 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Header CTA Buttons -->
+        <div class="hidden lg:flex items-center gap-4">
+          <button class="open-consult-modal inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-brand-900 font-bold px-5 py-2.5 rounded-lg shadow-lg shadow-amber-500/25 transition-all duration-300 transform hover:-translate-y-0.5">
+            <i data-lucide="calculator" class="w-4 h-4 text-brand-900"></i>
+            <span>Get Free Quote</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-lg bg-slate-800 text-slate-200 hover:text-white hover:bg-slate-700 focus:outline-none" aria-label="Open Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-brand-900/98 backdrop-blur-xl hidden flex flex-col justify-between p-6 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center">
+            <i data-lucide="building-2" class="w-6 h-6 text-brand-900"></i>
+          </div>
+          <div>
+            <span class="font-extrabold font-heading text-lg text-white">NEXA <span class="text-amber-500">BHARAT</span></span>
+            <p class="text-[9px] text-slate-400 tracking-wider">Building Dreams, Crafting Spaces</p>
+          </div>
+        </a>
+        <button id="mobile-menu-close" class="p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800" aria-label="Close Menu">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-4 py-8 text-base font-semibold text-slate-200">
+        <a href="index.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Home</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="about.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>About Us</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="services.html" class="text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Services</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="projects.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Projects Showcase</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="why-us.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Why Choose Us</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+        <a href="contact.html" class="hover:text-amber-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
+          <span>Contact & Locations</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-800 flex flex-col gap-4">
+      <button class="open-consult-modal w-full bg-gradient-to-r from-amber-500 to-amber-600 text-brand-900 font-bold py-3.5 rounded-lg shadow-lg text-center">
+        Book Free Consultation
+      </button>
+      <div class="text-center text-xs text-slate-400">
+        Direct Support: <a href="tel:+918481818152" class="text-amber-400 font-medium">+91 84818 18152</a> / <a href="tel:+916289378847" class="text-amber-400 font-medium">+91 62893 78847</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       3. Page Hero Banner
+       ========================================================================= -->
+  <section class="relative bg-brand-900 text-white py-20 bg-blueprint-pattern border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+        <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+        Full-Spectrum Capabilities
+      </div>
+      <h1 class="font-heading font-extrabold text-4xl sm:text-5xl text-white tracking-tight leading-tight mb-4">
+        Turnkey Construction & <br class="hidden sm:inline">
+        <span class="text-gradient-gold">Bespoke Interior Services</span>
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed">
+        From foundation stone laying to architectural 3D styling, modular kitchen fabrication, and luxury paint finishing—explore our complete suite of residential and commercial services.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. Detailed Service Sections (Deep Dive)
+       ========================================================================= -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+      
+      <!-- Service 1: New Construction & Civil Work -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 space-y-5">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-heading font-bold text-xl">
+            01
+          </div>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+            New Construction & Civil Work
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Turnkey end-to-end structural construction for independent houses, luxury villas, builder floors, and commercial buildings. We handle everything from soil testing and excavation to RCC framing, column casting, brick masonry, plastering, and waterproofing.
+          </p>
+          <div class="space-y-2.5 pt-2">
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Structural Engineering:</strong> Earthquake-resistant RCC frame with Tata Tiscon 550D TMT steel and UltraTech cement.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Precision Masonry:</strong> High-density red clay bricks / AAC lightweight blocks with polymer-modified plaster.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Approvals & Vetting:</strong> Soil test certification, structural stability certificates, and municipal compliance.</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <button data-service="New Construction & Civil Work" class="open-consult-modal inline-flex items-center gap-2 bg-brand-900 hover:bg-amber-600 text-white hover:text-white font-bold px-6 py-3 rounded-lg text-xs transition-colors">
+              <span>Request Construction Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80" alt="Civil Construction & RCC Frame Work" class="w-full h-80 sm:h-96 object-cover">
+        </div>
+      </div>
+
+      <!-- Service 2: Property Renovation & Remodeling -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 lg:order-2 space-y-5">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-heading font-bold text-xl">
+            02
+          </div>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+            Property Renovation & Remodeling
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Upgrade, modernize, and structurally optimize your existing residential or commercial property. We carry out wall alterations, room expansions, elevation facelifts, bathroom overhauls, and complete plumbing/electrical retrofits.
+          </p>
+          <div class="space-y-2.5 pt-2">
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Layout Reconfiguration:</strong> Non-load bearing wall removals, open-kitchen conversions, and room resizing.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Waterproofing & Repairs:</strong> Deep structural crack injection, Dr. Fixit chemical waterproofing, and damp isolation.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Facade Modernization:</strong> Modern exterior cladding (HPL, Shera boards, toughened glass railings, texture paint).</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <button data-service="Property Renovation" class="open-consult-modal inline-flex items-center gap-2 bg-brand-900 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-lg text-xs transition-colors">
+              <span>Book Renovation Assessment</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+        <div class="lg:col-span-6 lg:order-1 rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Home Remodeling and Renovation" class="w-full h-80 sm:h-96 object-cover">
+        </div>
+      </div>
+
+      <!-- Service 3: Architectural Planning & 3D Visualizations -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 space-y-5">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-heading font-bold text-xl">
+            03
+          </div>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+            Architectural Planning & 3D Visualization
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Every great structure starts with immaculate planning. Our architects provide Vastu-compliant 2D space planning, structural drawings, photorealistic 3D elevations, and virtual walkthroughs before physical construction begins.
+          </p>
+          <div class="space-y-2.5 pt-2">
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Vastu-Compliant 2D Floor Plans:</strong> Optimized light, ventilation, zoning, and circulation pathways.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Hyper-Realistic 3D Renders:</strong> Visualizing textures, lighting fixtures, furniture scale, and facade colors in 4K resolution.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Detailed Working Drawings:</strong> Electrical conduit layouts, plumbing schematics, beam cross-sections, and joinery details.</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <button data-service="Architectural Planning" class="open-consult-modal inline-flex items-center gap-2 bg-brand-900 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-lg text-xs transition-colors">
+              <span>Consult an Architect</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Architectural 3D CAD Planning and Blueprints" class="w-full h-80 sm:h-96 object-cover">
+        </div>
+      </div>
+
+      <!-- Service 4: Interior Design (Home & Office) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 lg:order-2 space-y-5">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-heading font-bold text-xl">
+            04
+          </div>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+            Interior Design (Home & Office Interiors)
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Create refined, luxurious living and working spaces. Our turnkey interior division handles full home decor, master bedrooms, living lounges, acoustic home theatres, corporate boardrooms, and open workstations with premium materials and ergonomic finishes.
+          </p>
+          <div class="space-y-2.5 pt-2">
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Custom Woodwork & Wardrobes:</strong> BWP IS:710 Marine ply carcasses, soft-close sliding wardrobes, and fluted panel accents.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Commercial Fitouts:</strong> Soundproof glass partitions, ergonomic height-adjustable desks, breakout zones, and HVAC routing.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Soft Furnishings & Wall Decor:</strong> Accent wallpapers, charcoal louvers, brass inlays, and customized upholstery.</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <button data-service="Interior Design" class="open-consult-modal inline-flex items-center gap-2 bg-brand-900 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-lg text-xs transition-colors">
+              <span>Book Interior Styling</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+        <div class="lg:col-span-6 lg:order-1 rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Luxury Residential Living Room Interior" class="w-full h-80 sm:h-96 object-cover">
+        </div>
+      </div>
+
+      <!-- Service 5: Modular Kitchens & False Ceilings -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 space-y-5">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-heading font-bold text-xl">
+            05
+          </div>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+            Modular Kitchens & False Ceilings
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            The heart of your home engineered with German precision. We build high-gloss acrylic, PU painted, and textured laminate modular kitchens complete with Blum/Hettich tandem boxes, quartz counters, and custom Gypsum false ceilings.
+          </p>
+          <div class="space-y-2.5 pt-2">
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>100% Boiling Waterproof (BWP) Core:</strong> Marine ply tested to withstand steam, humidity, and daily heavy usage.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>German Hardware & Organizers:</strong> Soft-close lift-ups, pantry pullouts, corner magic carousels, and cutlery trays.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Designer False Ceilings:</strong> Saint-Gobain Gyproc moisture-resistant boards with shadow profiles and magnetic track lights.</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <button data-service="Modular Kitchens & False Ceilings" class="open-consult-modal inline-flex items-center gap-2 bg-brand-900 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-lg text-xs transition-colors">
+              <span>Design Modular Kitchen</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Modern German Modular Kitchen Design" class="w-full h-80 sm:h-96 object-cover">
+        </div>
+      </div>
+
+      <!-- Service 6: Specialized Works -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 lg:order-2 space-y-5">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-heading font-bold text-xl">
+            06
+          </div>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+            Specialized Works (Electrical, Plumbing, Painting & Flooring)
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            The invisible backbone and tactile finishing that defines longevity. We execute fire-retardant electrical circuitry, pressure-tested CPVC plumbing, Italian marble diamond polishing, and luxury Royale emulsion wall finishes.
+          </p>
+          <div class="space-y-2.5 pt-2">
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Concealed Electrical MEP:</strong> FRLS Polycab/Havells copper wiring, Schneider modular switches, and MCB protection.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Plumbing & Sanitary:</strong> Astral CPVC/UPVC noise-dampening lines, Jaquar/Kohler diverters, and wall-hung WC systems.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Flooring & Luxury Paint:</strong> Italian Statuario marble, 4x2 vitrified tiles, epoxy joint grouting, and Asian Paints Royale Luxury Emulsion.</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <button data-service="Specialized Works" class="open-consult-modal inline-flex items-center gap-2 bg-brand-900 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-lg text-xs transition-colors">
+              <span>Book Specialized Work</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+        <div class="lg:col-span-6 lg:order-1 rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Specialized Electrical, Painting and Tile Flooring Work" class="w-full h-80 sm:h-96 object-cover">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. Brand & Material Partners
+       ========================================================================= -->
+  <section class="py-16 bg-slate-50 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-8">
+        We Exclusively Use Grade-A Certified Brand Partners
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center font-heading font-extrabold text-slate-700 text-sm sm:text-base">
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">TATA TISCON</div>
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">ULTRATECH</div>
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">HETTICH</div>
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">SAINT-GOBAIN</div>
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">ASIAN PAINTS</div>
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">KOHLER / JAQUAR</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. CTA Banner
+       ========================================================================= -->
+  <section class="py-16 bg-brand-900 text-white bg-blueprint-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-4">
+        Need a Tailored Quote for Your Specific Scope of Work?
+      </h2>
+      <p class="text-slate-300 text-base max-w-2xl mx-auto mb-8">
+        Talk to our project estimating team. We will prepare an itemized Bill of Quantities (BOQ) with zero hidden costs.
+      </p>
+      <button class="open-consult-modal bg-gradient-to-r from-amber-500 to-amber-600 text-brand-900 font-extrabold px-8 py-4 rounded-xl shadow-xl hover:from-amber-600 transition-all text-sm uppercase tracking-wider">
+        Get Custom Itemized BOQ
+      </button>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. Footer
+       ========================================================================= -->
+  <footer class="bg-brand-900 text-slate-400 border-t border-slate-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center">
+              <i data-lucide="building-2" class="w-6 h-6 text-brand-900"></i>
+            </div>
+            <div>
+              <span class="font-heading font-extrabold text-lg text-white">NEXA <span class="text-amber-500">BHARAT</span></span>
+              <p class="text-[9px] text-slate-400 tracking-wider">Building Dreams, Crafting Spaces</p>
+            </div>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed pr-6">
+            From concept to final finishing, NEXA BHARAT creates spaces that are functional, stylish, comfortable, and built to last. Your trusted partner for turnkey construction, renovation, and luxury interiors.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+            <li><a href="about.html" class="hover:text-amber-400">About Us</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Services</a></li>
+            <li><a href="projects.html" class="hover:text-amber-400">Projects Showcase</a></li>
+            <li><a href="why-us.html" class="hover:text-amber-400">Why Choose Us</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Our Services</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="services.html" class="hover:text-amber-400">New Construction</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Property Renovation</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Architectural 3D Plans</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Home & Office Interiors</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Modular Kitchens</a></li>
+            <li><a href="services.html" class="hover:text-amber-400">Civil & Specialized Works</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Contact Info</h4>
+          <ul class="space-y-3 text-xs">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5"></i>
+              <span>Jatragachi RR site Nandan Nagar, New Town, North 24 Parganas, Pin 700162, West Bengal</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+              <div class="flex flex-col gap-0.5">
+                <a href="tel:+918481818152" class="hover:text-amber-400 font-medium">+91 84818 18152</a>
+                <a href="tel:+916289378847" class="hover:text-amber-400 font-medium">+91 62893 78847</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+              <a href="mailto:nexabharatinterior@gmail.com" class="hover:text-amber-400">nexabharatinterior@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+              <span>Mon - Sat: 9:00 AM - 7:30 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 NEXA BHARAT Construction & Interior Design. All rights reserved.</p>
+        <div class="flex items-center space-x-6">
+          <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-400">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Modal Dialog -->
+  <div id="consultation-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+    <div class="modal-backdrop fixed inset-0 bg-brand-900/80 backdrop-blur-sm"></div>
+    <div class="relative bg-slate-900 border border-slate-700 text-white rounded-2xl w-full max-w-lg p-6 sm:p-8 shadow-2xl z-10 animate-fade-in max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div>
+          <h3 class="font-heading font-bold text-xl text-white">Book Free Consultation</h3>
+          <p class="text-xs text-amber-400 mt-0.5">Get a customized estimate & architectural review</p>
+        </div>
+        <button class="close-modal-btn p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800" aria-label="Close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form class="nexa-lead-form space-y-4 pt-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+          <input type="text" name="name" required placeholder="e.g. Ramesh Chandra" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number *</label>
+            <input type="tel" name="phone" required placeholder="+91 98765 XXXXX" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Email</label>
+            <input type="email" name="email" placeholder="ramesh@example.com" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Project Details / Requirements</label>
+          <textarea name="message" rows="3" placeholder="Tell us about the property type, area in sq.ft, city, or service required..." class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 text-brand-900 font-extrabold py-3 rounded-lg shadow-lg text-sm transition-all uppercase tracking-wider">
+          Confirm Consultation Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-40 bg-slate-800/90 hover:bg-amber-500 hover:text-brand-900 text-slate-200 p-3 rounded-full shadow-xl transition-all opacity-0 invisible" aria-label="Back to Top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
